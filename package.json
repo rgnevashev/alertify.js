@@ -43,9 +43,7 @@
     "alert"
   ],
   "scripts": {
-    "test": "snyk test && gulp test",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "test": "gulp test",
   },
   "repository": "git@github.com:alertifyjs/alertify.js.git",
   "devDependencies": {
