@@ -32,7 +32,7 @@
          */
         var _alertify = {
 
-            parent: document.body,
+            parent: typeof window !== "undefined" && document.body,
             version: "1.0.11",
             defaultOkLabel: "Ok",
             okLabel: "Ok",
@@ -412,7 +412,7 @@
             },
 
             injectCSS: function() {
-                if (!document.querySelector("#alertifyCSS")) {
+                if (typeof window !== "undefined" && !document.querySelector("#alertifyCSS")) {
                     var head = document.getElementsByTagName("head")[0];
                     var css = document.createElement("style");
                     css.type = "text/css";
